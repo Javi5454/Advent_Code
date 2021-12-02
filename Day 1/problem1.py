@@ -3,7 +3,7 @@ import math
 counter = 0
 last = math.inf
 
-with open("./Inputs/input.txt","r") as archive:
+with open("input.txt","r") as archive:
     for line in archive.readlines():
         if last < int(line):
             counter +=1
