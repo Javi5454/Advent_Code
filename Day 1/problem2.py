@@ -10,16 +10,10 @@ with open("./Inputs/input.txt","r") as archive:
     for line in archive.readlines():
         group = group[1:] + [int(line)]
 
-        if check_sum % 6 == 0:
-            check = True
+        sum1 = sum(group[:3])
+        sum2 = sum(group[1:])
 
-        if(check):
-            sum1 = sum(group[:3])
-            sum2 = sum(group[1:])
-
-            if sum1 < sum2:
-                counter += 1
-        else:
-            check_sum +=1
+        if sum1 < sum2:
+            counter += 1
 
 print(counter)
